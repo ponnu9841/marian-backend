@@ -84,7 +84,7 @@ class PortfolioController extends Controller
             $portfolio->description = $request->description;
             $validator = Validator::make($request->all(), [
                 'id' => 'required|string',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
                 'alt' => 'nullable|string',
                 'title' => 'nullable|string',
                 'description' => 'nullable|string',

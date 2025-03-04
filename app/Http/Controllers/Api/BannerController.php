@@ -32,7 +32,7 @@ class BannerController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
                 'alt' => 'nullable|string',
             ]);
             if (!$validator->passes()) {
