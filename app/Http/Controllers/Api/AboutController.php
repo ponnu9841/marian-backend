@@ -39,7 +39,7 @@ class AboutController extends Controller
             $validator = Validator::make($request->all(), [
                 'title' => 'required|string',
                 'title_badge' => 'required|string',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp',
                 'alt' => 'string|nullable',
                 'short_description' => 'string',
                 'long_description' => 'nullable|string',
